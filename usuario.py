@@ -1,3 +1,4 @@
+from logger_base import log
 class Usuario: 
     def __init__(self, id_usuario=None, username=None, password=None) -> None:
         self._id_usuario = id_usuario

@@ -1,6 +1,7 @@
 from cursor_del_pool import CursorDelPool 
 from logger_base import log
 from usuario import Usuario
+from conexion import Conexion
 
 class UsuarioDAO:
     """DAO -Data Access Object para la tabla de Usuario.

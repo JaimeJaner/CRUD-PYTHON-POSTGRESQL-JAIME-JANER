@@ -46,5 +46,5 @@ class UsuarioDAO:
             log.debug(f"Usuario a eliminar {usuario}")
             valores = (usuario.id_usuario,) #Debe ser una tupla de valores, por eso la coma al final -en caso de ser valor único.-
             cursor.execute(cls._ELIMINAR, valores) 
-            return cursor.rowcount
+            return cursor.rowcount #Conteo de filas afectadas.
         

@@ -4,8 +4,8 @@ from usuario import Usuario
 from conexion import Conexion
 
 class UsuarioDAO:
-    """DAO -Data Access Object para la tabla de Usuario.
-       CRUD - CREATE- READ - UPDATE -  DELETE TABLA USUARIO. 
+    """DAO - Data Access Object para la tabla de Usuario.
+       CRUD TABLA USUARIO. 
     """
     
     _SELECT = "SELECT * FROM usuario ORDER BY id_usuario"
@@ -22,7 +22,7 @@ class UsuarioDAO:
             usuarios = [] #Creamos una lista de objetos.
             for registro in registros: #Iteramos los datos recuperados para crear los objetos apartir de sus valores.
                 usuario = Usuario(registro[0], registro[1], registro[2]) #Creamos un objeto de Usuario a partir de los datos obtenidos en cada iteración.
-                usuarios.append(usuarios)# Y los almacenamos en la lista.
+                usuarios.append(usuario)# Y los almacenamos en la lista.
         return usuarios #Retornamos la lista de usuarios recuperada. 
 
     @classmethod
@@ -48,4 +48,3 @@ class UsuarioDAO:
             valores = (usuario.id_usuario,) #Debe ser una tupla de valores, por eso la coma al final -en caso de ser valor único.-
             cursor.execute(cls._ELIMINAR, valores) 
             return cursor.rowcount #Conteo de filas afectadas.
-        

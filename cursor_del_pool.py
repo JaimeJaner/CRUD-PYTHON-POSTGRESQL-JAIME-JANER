@@ -47,7 +47,7 @@ if __name__ == "__main__":
     #con with, se ejecuta el __init__ y luego el __enter__
     with CursorDelPool() as cursor:
         log.debug("Dentro del bloque 'with.'")
-        cursor.execute("Select * from Persona")
+        cursor.execute("Select * from usuario")
         log.debug(cursor.fetchall())
         
         

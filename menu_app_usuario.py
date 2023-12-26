@@ -18,7 +18,6 @@ while opcion != 5:
     if opcion == 1:
         usuarios = UsuarioDAO.seleccionar()
         for usuario in usuarios: 
-            print(usuario)
             log.info(usuario)
     
     elif opcion == 2:
